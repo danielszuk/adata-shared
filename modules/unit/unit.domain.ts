@@ -1,5 +1,5 @@
 import { Length } from 'class-validator';
-import { IUnitDTO } from 'shared/modules/unit/unit.dto';
+import { IUnitDTO } from './unit.dto';
 
 export class UnitDomain implements IUnitDTO {
   id: number;
