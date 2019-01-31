@@ -1,7 +1,7 @@
 import { IsUrl, IsNotEmpty, IsOptional } from 'class-validator';
 import { UnitDomain } from '../unit/unit.domain';
 import { MatrixDomain } from '../matrix/matrix.domain';
-import { IDataBankWorldBankDTO } from './databank-worldbank.interface';
+import { IDataBankWorldBankDTO } from './databank-worldbank.dto';
 export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
   id: number;
 
