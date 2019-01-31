@@ -1,6 +1,6 @@
-import { UnitDomain } from '../unit/unit.domain';
-import { ValueDomain } from './value/value.domain';
-import { DataBankWorldBankDomain } from '../databank-worldbank/databank-worldbank.domain';
+import { IUnitDTO } from '../unit/unit.dto';
+import { IValueDomainDTO } from './value/value.dto';
+import { IDataBankWorldBankDTO } from '../databank-worldbank/databank-worldbank.dto';
 
 export interface IMatrixDomainDTO {
   id: number;
@@ -9,11 +9,11 @@ export interface IMatrixDomainDTO {
 
   name: string;
 
-  dim1: UnitDomain;
+  dim1: IUnitDTO;
 
-  dim2: UnitDomain;
+  dim2: IUnitDTO;
 
-  values: ValueDomain[];
+  values: IValueDomainDTO[];
 
-  sync: DataBankWorldBankDomain;
+  sync: IDataBankWorldBankDTO;
 }
