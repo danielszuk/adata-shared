@@ -1,9 +1,8 @@
 import { UnitDomain } from '../unit/unit.domain';
 import { ValueDomain } from './value/value.domain';
 import { DataBankWorldBankDomain } from '../databank-worldbank/databank-worldbank.domain';
-import { IMatrixDomainDTO } from './matrix.dto';
 
-export class MatrixDomain implements IMatrixDomainDTO {
+export interface IMatrixDomainDTO {
   id: number;
 
   uniqueName: string;
