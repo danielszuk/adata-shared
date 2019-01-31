@@ -8,8 +8,9 @@ import {
   ArrayMaxSize,
 } from 'class-validator';
 import { MatrixDomain } from '../matrix/matrix.domain';
+import { IVisualizationDomainDTO } from './visualization.dto';
 
-export class VisualizationDomain {
+export class VisualizationDomain implements IVisualizationDomainDTO {
   @IsOptional()
   id: number;
 
