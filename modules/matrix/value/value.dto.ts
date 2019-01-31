@@ -1,9 +1,9 @@
-import { MatrixDomain } from '../matrix.domain';
+import { IMatrixDomainDTO } from '../matrix.dto';
 
 export interface IValueDomainDTO {
   id: number;
 
-  matrix: MatrixDomain;
+  matrix: IMatrixDomainDTO;
 
   dim1: string;
 
