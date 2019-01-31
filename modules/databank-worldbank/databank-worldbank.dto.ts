@@ -1,5 +1,5 @@
-import { UnitDomain } from '../unit/unit.domain';
-import { MatrixDomain } from '../matrix/matrix.domain';
+import { IUnitDTO } from '../unit/unit.dto';
+import { IMatrixDomainDTO } from '../matrix/matrix.dto';
 
 export interface IDataBankWorldBankDTO {
   id: number;
@@ -18,11 +18,11 @@ export interface IDataBankWorldBankDTO {
 
   dim1Query: string;
 
-  dim1: UnitDomain;
+  dim1: IUnitDTO;
 
   dim2Query: string;
 
-  dim2: UnitDomain;
+  dim2: IUnitDTO;
 
-  matrix: MatrixDomain[];
+  matrix: IMatrixDomainDTO[];
 }
