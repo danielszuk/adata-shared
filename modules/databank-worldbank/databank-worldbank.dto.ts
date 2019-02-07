@@ -8,8 +8,6 @@ export interface IDataBankWorldBankDTO {
 
   lastUpdated: string;
 
-  dataArrayIndex: number;
-
   uniqueNameQuery: string;
 
   nameQuery: string;

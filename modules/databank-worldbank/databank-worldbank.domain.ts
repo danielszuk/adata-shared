@@ -10,10 +10,6 @@ export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
 
   lastUpdated: string;
 
-  @IsNumber()
-  @IsNotEmpty()
-  dataArrayIndex: number;
-
   @IsNotEmpty()
   uniqueNameQuery: string;
 
