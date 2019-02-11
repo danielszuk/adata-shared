@@ -3,7 +3,7 @@ import { UnitDomain } from '../unit/unit.domain';
 import { MatrixDomain } from '../matrix/matrix.domain';
 import { IDataBankWorldBankDTO } from './databank-worldbank.dto';
 
-enum DataBankWorldBankDomainIntervals {
+export enum DataBankWorldBankDomainIntervals {
   daily = 'daily',
   monthly = 'monthly',
   yearly = 'yearly'
@@ -25,7 +25,7 @@ export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
 
   @IsEnum(DataBankWorldBankDomainIntervals)
   @IsNotEmpty()
-  interval: string;
+  interval: DataBankWorldBankDomainIntervals;
 
   @IsNotEmpty()
   dim1Query: string;

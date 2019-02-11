@@ -1,5 +1,6 @@
 import { IUnitDTO } from '../unit/unit.dto';
 import { IMatrixDomainDTO } from '../matrix/matrix.dto';
+import { DataBankWorldBankDomainIntervals } from 'src/shared/modules/databank-worldbank/databank-worldbank.domain';
 
 export interface IDataBankWorldBankDTO {
   id: number;
@@ -12,7 +13,7 @@ export interface IDataBankWorldBankDTO {
 
   nameQuery: string;
 
-  interval: string;
+  interval: DataBankWorldBankDomainIntervals;
 
   dim1Query: string;
 
