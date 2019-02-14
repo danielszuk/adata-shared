@@ -6,7 +6,7 @@ import { IDataBankWorldBankDTO } from './databank-worldbank.dto';
 export enum DataBankWorldBankDomainIntervals {
   daily = 'daily',
   monthly = 'monthly',
-  yearly = 'yearly'
+  yearly = 'yearly',
 }
 
 export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
@@ -40,5 +40,5 @@ export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
   dim2: UnitDomain;
 
   @IsOptional()
-  matrix: MatrixDomain[];
+  matrices: MatrixDomain[];
 }

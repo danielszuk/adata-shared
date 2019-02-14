@@ -23,5 +23,5 @@ export interface IDataBankWorldBankDTO {
 
   dim2: IUnitDTO;
 
-  matrix: IMatrixDomainDTO[];
+  matrices: IMatrixDomainDTO[];
 }
