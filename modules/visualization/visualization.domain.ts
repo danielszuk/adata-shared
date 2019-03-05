@@ -9,6 +9,7 @@ import {
 } from 'class-validator';
 import { MatrixDomain } from '../matrix/matrix.domain';
 import { IVisualizationDomainDTO } from './visualization.dto';
+import { UserDomain } from '../auth/user/user.domain';
 
 export class VisualizationDomain implements IVisualizationDomainDTO {
   @IsOptional()
@@ -27,4 +28,6 @@ export class VisualizationDomain implements IVisualizationDomainDTO {
   @ArrayMinSize(1)
   @ArrayMaxSize(20)
   matrices: MatrixDomain[];
+
+  user: UserDomain;
 }
