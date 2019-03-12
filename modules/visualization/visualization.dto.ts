@@ -1,4 +1,5 @@
 import { IMatrixDomainDTO } from '../matrix/matrix.dto';
+import { IUserDTO } from '../auth/user/user.dto';
 
 export interface IVisualizationDomainDTO {
   id: number;
@@ -8,4 +9,6 @@ export interface IVisualizationDomainDTO {
   description: string;
 
   matrices: IMatrixDomainDTO[];
+
+  user: IUserDTO;
 }
