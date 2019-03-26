@@ -1,4 +1,4 @@
-import { MaxLength, IsNotEmpty } from 'class-validator';
+import { MaxLength, IsNotEmpty, Length } from 'class-validator';
 import { IDimensionDTO } from './dimension.dto';
 
 export class DimensionDomain implements IDimensionDTO {
@@ -8,6 +8,6 @@ export class DimensionDomain implements IDimensionDTO {
   @MaxLength(30)
   name: string;
 
-  @MaxLength(10)
+  @Length(0, 20)
   unit: string;
 }
