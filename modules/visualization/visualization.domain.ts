@@ -5,14 +5,13 @@ import {
   MinLength,
   IsArray,
   ArrayMinSize,
-  ArrayMaxSize,
+  ArrayMaxSize
 } from 'class-validator';
 import { MatrixDomain } from '../matrix/matrix.domain';
 import { IVisualizationDomainDTO } from './visualization.dto';
 import { UserDomain } from '../auth/user/user.domain';
 
 export class VisualizationDomain implements IVisualizationDomainDTO {
-  @IsOptional()
   id: number;
 
   @IsNotEmpty()
@@ -20,8 +19,8 @@ export class VisualizationDomain implements IVisualizationDomainDTO {
   @MaxLength(63)
   title: string;
 
-  @IsNotEmpty()
-  @MaxLength(255)
+  @IsOptional()
+  @MaxLength(500)
   description: string;
 
   @IsArray()
