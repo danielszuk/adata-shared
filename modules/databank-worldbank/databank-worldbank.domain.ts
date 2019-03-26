@@ -1,7 +1,7 @@
 import { IsUrl, IsNotEmpty, IsOptional, IsEnum } from 'class-validator';
-import { UnitDomain } from '../unit/unit.domain';
 import { MatrixDomain } from '../matrix/matrix.domain';
 import { IDataBankWorldBankDTO } from './databank-worldbank.dto';
+import { DimensionDomain } from '../dimension/dimension.domain';
 
 export enum DataBankWorldBankDomainIntervals {
   daily = 'daily',
@@ -31,13 +31,13 @@ export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
   dim1Query: string;
 
   @IsNotEmpty()
-  dim1: UnitDomain;
+  dim1: DimensionDomain;
 
   @IsNotEmpty()
   dim2Query: string;
 
   @IsNotEmpty()
-  dim2: UnitDomain;
+  dim2: DimensionDomain;
 
   @IsOptional()
   matrices: MatrixDomain[];

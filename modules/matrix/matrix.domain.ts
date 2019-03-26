@@ -1,7 +1,7 @@
-import { UnitDomain } from '../unit/unit.domain';
 import { ValueDomain } from './value/value.domain';
 import { DataBankWorldBankDomain } from '../databank-worldbank/databank-worldbank.domain';
 import { IMatrixDomainDTO } from './matrix.dto';
+import { DimensionDomain } from '../dimension/dimension.domain';
 
 export class MatrixDomain implements IMatrixDomainDTO {
   id: number;
@@ -10,9 +10,9 @@ export class MatrixDomain implements IMatrixDomainDTO {
 
   name: string;
 
-  dim1: UnitDomain;
+  dim1: DimensionDomain;
 
-  dim2: UnitDomain;
+  dim2: DimensionDomain;
 
   values: ValueDomain[];
 

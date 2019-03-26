@@ -1,6 +1,6 @@
-import { IUnitDTO } from '../unit/unit.dto';
 import { IMatrixDomainDTO } from '../matrix/matrix.dto';
 import { DataBankWorldBankDomainIntervals } from 'src/shared/modules/databank-worldbank/databank-worldbank.domain';
+import { IDimensionDTO } from '../dimension/dimension.dto';
 
 export interface IDataBankWorldBankDTO {
   id: number;
@@ -17,11 +17,11 @@ export interface IDataBankWorldBankDTO {
 
   dim1Query: string;
 
-  dim1: IUnitDTO;
+  dim1: IDimensionDTO;
 
   dim2Query: string;
 
-  dim2: IUnitDTO;
+  dim2: IDimensionDTO;
 
   matrices: IMatrixDomainDTO[];
 }
