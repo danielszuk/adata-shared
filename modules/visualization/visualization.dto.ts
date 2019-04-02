@@ -1,6 +1,5 @@
-import { IMatrixDomainDTO } from '../matrix/matrix.dto';
 import { IUserDTO } from '../auth/user/user.dto';
-import { Colors } from 'src/shared/enums/colors.enum';
+import { IMatrixColorDomainDTO } from './matrix.color/matrix.color.dto';
 
 export interface IVisualizationDomainDTO {
   id: number;
@@ -9,7 +8,7 @@ export interface IVisualizationDomainDTO {
 
   description: string;
 
-  matrices: { matrix: IMatrixDomainDTO; color: Colors }[];
+  matrices: IMatrixColorDomainDTO[];
 
   user: IUserDTO;
 }
