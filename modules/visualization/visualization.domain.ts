@@ -1,8 +1,15 @@
-import { IsOptional, IsNotEmpty, MaxLength, MinLength } from 'class-validator';
-import { Type } from 'class-transformer';
+import {
+  IsOptional,
+  IsNotEmpty,
+  MaxLength,
+  MinLength,
+  ArrayMaxSize,
+  ArrayMinSize,
+} from 'class-validator';
+
 import { IVisualizationDomainDTO } from './visualization.dto';
 import { UserDomain } from '../auth/user/user.domain';
-import { MatrixColorDomain } from './matrix.color/matrix.color.domain';
+import { VisualizationMatrixDomain } from './visualization.matrix/visualization.matrix.domain';
 
 export class VisualizationDomain implements IVisualizationDomainDTO {
   id: number;
@@ -16,8 +23,9 @@ export class VisualizationDomain implements IVisualizationDomainDTO {
   @MaxLength(500)
   description: string;
 
-  @Type(() => MatrixColorDomain)
-  matrices: MatrixColorDomain[];
+  @ArrayMinSize(1)
+  @ArrayMaxSize(6)
+  matrices: VisualizationMatrixDomain[];
 
   user: UserDomain;
 }

@@ -1,5 +1,5 @@
 import { IUserDTO } from '../auth/user/user.dto';
-import { IMatrixColorDomainDTO } from './matrix.color/matrix.color.dto';
+import { IVisualizationMatrixDomainDTO } from './visualization.matrix/visualization.matrix.dto';
 
 export interface IVisualizationDomainDTO {
   id: number;
@@ -8,7 +8,7 @@ export interface IVisualizationDomainDTO {
 
   description: string;
 
-  matrices: IMatrixColorDomainDTO[];
+  matrices: IVisualizationMatrixDomainDTO[];
 
   user: IUserDTO;
 }
