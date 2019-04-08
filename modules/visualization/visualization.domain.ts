@@ -3,26 +3,13 @@ import {
   IsNotEmpty,
   MaxLength,
   MinLength,
-  IsArray,
-  ArrayMinSize,
   ArrayMaxSize,
-  IsEnum
+  ArrayMinSize,
 } from 'class-validator';
-import { Type } from 'class-transformer';
-import { MatrixDomain } from '../matrix/matrix.domain';
+
 import { IVisualizationDomainDTO } from './visualization.dto';
 import { UserDomain } from '../auth/user/user.domain';
-import { Colors } from 'src/shared/enums/colors.enum';
-
-class Matrix {
-  @IsArray()
-  @ArrayMinSize(1)
-  @ArrayMaxSize(7)
-  matrix: MatrixDomain;
-
-  @IsEnum(Colors)
-  color: Colors;
-}
+import { VisualizationMatrixDomain } from './visualization.matrix/visualization.matrix.domain';
 
 export class VisualizationDomain implements IVisualizationDomainDTO {
   id: number;
@@ -36,8 +23,9 @@ export class VisualizationDomain implements IVisualizationDomainDTO {
   @MaxLength(500)
   description: string;
 
-  @Type(() => Matrix)
-  matrices: Matrix[];
+  @ArrayMinSize(1)
+  @ArrayMaxSize(6)
+  matrices: VisualizationMatrixDomain[];
 
   user: UserDomain;
 }
