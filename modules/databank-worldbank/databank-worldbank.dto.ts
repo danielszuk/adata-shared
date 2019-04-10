@@ -1,4 +1,3 @@
-import { IMatrixDomainDTO } from '../matrix/matrix.dto';
 import { DataBankWorldBankDomainIntervals } from 'src/shared/modules/databank-worldbank/databank-worldbank.domain';
 import { IDimensionDTO } from '../dimension/dimension.dto';
 
@@ -23,5 +22,5 @@ export interface IDataBankWorldBankDTO {
 
   dim2: IDimensionDTO;
 
-  matrices: IMatrixDomainDTO[];
+  matricesCount?: number;
 }

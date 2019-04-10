@@ -1,5 +1,4 @@
-import { IsUrl, IsNotEmpty, IsOptional, IsEnum } from 'class-validator';
-import { MatrixDomain } from '../matrix/matrix.domain';
+import { IsUrl, IsNotEmpty, IsEnum } from 'class-validator';
 import { IDataBankWorldBankDTO } from './databank-worldbank.dto';
 import { DimensionDomain } from '../dimension/dimension.domain';
 
@@ -38,7 +37,4 @@ export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
 
   @IsNotEmpty()
   dim2: DimensionDomain;
-
-  @IsOptional()
-  matrices: MatrixDomain[];
 }
