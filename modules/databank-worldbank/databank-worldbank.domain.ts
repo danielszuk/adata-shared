@@ -5,12 +5,13 @@ import { DimensionDomain } from '../dimension/dimension.domain';
 export enum DataBankWorldBankDomainIntervals {
   daily = 'daily',
   monthly = 'monthly',
-  yearly = 'yearly',
+  yearly = 'yearly'
 }
 
 export class DataBankWorldBankDomain implements IDataBankWorldBankDTO {
   id: number;
 
+  @IsNotEmpty()
   @IsUrl()
   apiUri: string;
 
