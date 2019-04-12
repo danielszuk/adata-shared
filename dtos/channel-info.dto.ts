@@ -1,4 +1,7 @@
 export interface IChannelInfoDTO {
   properties: string[];
-  results: object[];
+  results: {
+    total: number;
+    someRandom: object[];
+  };
 }
