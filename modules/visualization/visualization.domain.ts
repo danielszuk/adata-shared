@@ -10,6 +10,7 @@ import {
 import { IVisualizationDomainDTO } from './visualization.dto';
 import { UserDomain } from '../auth/user/user.domain';
 import { VisualizationMatrixDomain } from './visualization.matrix/visualization.matrix.domain';
+import { DimensionDomain } from '../dimension/dimension.domain';
 
 export class VisualizationDomain implements IVisualizationDomainDTO {
   id: number;
@@ -27,5 +28,14 @@ export class VisualizationDomain implements IVisualizationDomainDTO {
   @ArrayMaxSize(6)
   matrices: VisualizationMatrixDomain[];
 
-  user: UserDomain;
+  user: UserDomain; // no validation backend adds user
+
+  @IsNotEmpty()
+  x: DimensionDomain;
+
+  @IsNotEmpty()
+  y: DimensionDomain;
+
+  @IsOptional()
+  y2?: DimensionDomain;
 }
