@@ -13,6 +13,7 @@ import { VisualizationMatrixDomain } from './visualization.matrix/visualization.
 import { DimensionDomain } from '../dimension/dimension.domain';
 
 export class VisualizationDomain implements IVisualizationDomainDTO {
+  @IsOptional()
   id: number;
 
   @IsNotEmpty()
