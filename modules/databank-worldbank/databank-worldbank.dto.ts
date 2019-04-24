@@ -1,5 +1,5 @@
-import { DataBankWorldBankDomainIntervals } from 'src/shared/modules/databank-worldbank/databank-worldbank.domain';
 import { IDimensionDTO } from '../dimension/dimension.dto';
+import { DataBankWorldBankDomainIntervals } from './databank-worldbank.domain';
 
 export interface IDataBankWorldBankDTO {
   id: number;

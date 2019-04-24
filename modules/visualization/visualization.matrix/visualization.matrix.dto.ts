@@ -1,6 +1,6 @@
-import { Colors } from 'src/shared/enums/colors.enum';
 import { IMatrixDomainDTO } from '../../matrix/matrix.dto';
 import { IVisualizationDomainDTO } from '../visualization.dto';
+import { Colors } from '../../../enums/colors.enum';
 
 export interface IVisualizationMatrixDomainDTO {
   id: number;
